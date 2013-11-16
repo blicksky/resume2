@@ -1,4 +1,5 @@
 (function(){
+	
 	var fs = require('fs');
 	
 	var templateString = fs.readFileSync('src/resume-template.hbs', {encoding: 'utf8'});

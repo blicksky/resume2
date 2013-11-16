@@ -29,11 +29,12 @@
 							{{/with}}
 						</li>
 
+						<li><i class="fa-li fa fa-envelope"></i>{{emailAddress}}</li>
+
 						{{#each phoneNumbers}}
 						<li><i class="fa-li fa fa-phone"></i>({{areaCode}}) {{exchange}}-{{suffix}}</li>
 						{{/each}}
-
-						<li><i class="fa-li fa fa-envelope"></i>{{emailAddress}}</li>
+					
 					</ul>
 
 				</address>
@@ -42,6 +43,14 @@
 
 			<section>
 				<h2>Employment</h2>
+
+				<ol class="section-list">
+				{{#each employment}}
+					<li>
+						<h3>{{employer}}</h3>
+					</li>
+				{{/each}}
+				</ol>
 			</section>
 
 			<section>

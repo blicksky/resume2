@@ -34,3 +34,15 @@ address {
 address i.fa {
 	color: #999999;
 }
+
+h2 {
+	background-color: #1f8dd6;
+	color: #FFFFFF;
+	font-size: 1em;
+	padding: 0.1em 1em;
+}
+
+.section-list {
+	list-style: none;
+	padding: 0;
+}
