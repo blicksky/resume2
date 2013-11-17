@@ -1,0 +1,12 @@
+body {
+	padding: 0;
+	background-color: #FFFFFF;
+}
+
+#page {
+	max-width: auto;
+	min-height: auto;
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+}

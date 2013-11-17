@@ -3,43 +3,50 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{{name}}</title>
-		
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" >
-		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css" />
+
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?pure/0.3.0/base-min.css&pure/0.3.0/grids-min.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?pure/0.3.0/base-min.css&pure/0.3.0/grids-nr-min.css" media="print" />
+
 		<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+
 		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<link rel="stylesheet" type="text/css" href="styles-print.css" media="print" />
 	</head>
 	<body>
 		<div id="page">
 
-			<header class="pure-g-r">
+			<div class="pure-g pure-g-r">
 
 				<div class="pure-u-7-12">
-					<h1>{{name}}</h1>
-					{{title}}
+					<header>
+						<h1>{{name}}</h1>
+						<span class="title">{{title}}</span>
+					</header>
 				</div>
 
-				<address class="pure-u-5-12">
-					
-					<ul class="fa-ul">
-						<li>
-							<i class="fa-li fa fa-home"></i>
-							{{#with address}}
-								{{street}} &middot; {{city}}, {{state.code}} {{zipCode}}
-							{{/with}}
-						</li>
+				<div class="pure-u-5-12">
+					<address>
+						<ul class="fa-ul">
+							<li>
+								<i class="fa-li fa fa-home"></i>
+								{{#with address}}
+								<span>{{street}}</span> &middot; <span>{{city}}, {{state.code}} {{zipCode}}</span>
+								{{/with}}
+							</li>
 
-						<li><i class="fa-li fa fa-envelope"></i>{{emailAddress}}</li>
+							<li><a href="{{url}}"><i class="fa-li fa fa-globe"></i> <em>{{url}}</em></a></li>
 
-						{{#each phoneNumbers}}
-						<li><i class="fa-li fa fa-phone"></i>({{areaCode}}) {{exchange}}-{{suffix}}</li>
-						{{/each}}
-					
-					</ul>
+							<li><a href="mailto:{{emailAddress}}"><i class="fa-li fa fa-envelope"></i> <em>{{emailAddress}}</em></a></li>
 
-				</address>
+							{{#each phoneNumbers}}
+							<li><i class="fa-li fa fa-phone"></i> ({{areaCode}}) {{exchange}}-{{suffix}}</li>
+							{{/each}}
+						
+						</ul>
+					</address>
+				</div>
 
-			</header>
+			</div>
 
 			<section>
 				<h2>Employment</h2>
