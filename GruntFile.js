@@ -8,11 +8,13 @@ module.exports = function(grunt) {
       dist: ['<%=pkg.distDir%>']
     },
 
-    copy: {
-      css: {
-        files: [
-          {expand: true, flatten: true, src: ['<%=pkg.srcDir%>/*.css'], dest: '<%=pkg.distDir%>', filter: 'isFile'}
-        ]
+    less: {
+      styles: {
+        expand: true,
+        cwd:    '<%=pkg.srcDir%>',
+        src:    '*.less',
+        dest:   '<%=pkg.distDir%>',  
+        ext:    '.css'
       }
     },
 
@@ -24,8 +26,8 @@ module.exports = function(grunt) {
 
     watch: {
       css: {
-        files: '<%=pkg.srcDir%>/*.css',
-        tasks: ['copy:css'],
+        files: '<%=pkg.srcDir%>/*.less',
+        tasks: ['less:styles'],
       },
       template: {
         files: ['<%=pkg.srcDir%>/*.hbs', '<%=pkg.srcDir%>/*.json'],
@@ -35,9 +37,9 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   grunt.registerTask('applyTemplate', 'Applies the handlebars template and produces the resulting HTML file', function() {
 
@@ -62,7 +64,7 @@ module.exports = function(grunt) {
     grunt.file.write( outputFile, template( grunt.file.readJSON(dataFile) ) );
   });
 
-  grunt.registerTask('build', ['copy:css', 'applyTemplate'])
+  grunt.registerTask('build', ['less:styles', 'applyTemplate'])
 
   // Default task(s).
   grunt.registerTask('default', ['clean:dist', 'build']);
