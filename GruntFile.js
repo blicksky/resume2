@@ -67,6 +67,6 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['less:styles', 'applyTemplate'])
 
   // Default task(s).
-  grunt.registerTask('default', ['clean:dist', 'build']);
+  grunt.registerTask('default', ['clean:dist', 'build', 'watch']);
 
 };
