@@ -1,3 +1,9 @@
+@highlightColor: #4183C4;
+@backgroundColor: #F0F0F0;
+@pageColor: #FDFAF9;
+@textColor: #333333;
+@lightTextColor: #999999;
+
 body,
 .pure-g [class *= "pure-u"],
 .pure-g-r [class *= "pure-u"] {
@@ -6,7 +12,8 @@ body,
 
 body {
 	padding: 10px;
-	background-color: #F0F0F0;
+	background-color: @backgroundColor;
+	color: @textColor;
 }
 
 #page {
@@ -16,7 +23,7 @@ body {
 	padding: 20px;
 	box-shadow: 0px 2px 5px 0px #888888;
 	transition: box-shadow 0.3s;
-	background-color: #FFFFFF;
+	background-color: @pageColor;
 
 	&:hover {
 		box-shadow: 0px 2px 15px 0px #888888;
@@ -28,6 +35,9 @@ header {
 
 	.title {
 		font-style: italic;
+		color: @lightTextColor;
+		position: relative;
+		top: -10px;
 	}
 
 	* {
@@ -38,6 +48,7 @@ header {
 }
 
 h1 {
+	color: @highlightColor;
 	font-size: 3em;
 	font-weight: normal;
 	margin: 0;
@@ -58,7 +69,7 @@ address {
 	}
 
 	a {
-		color: #000000;
+		color: @textColor;
 		text-decoration: none;
 	
 		em {
@@ -72,25 +83,25 @@ address {
 		}
 
 		&:hover em {
-			background-color: #1f8dd6;
-			color: #FFFFFF;
+			background-color: @highlightColor;
+			color: @pageColor;
 		}
 	}
 
 	i.fa {
-		color: #999999;
+		color: @lightTextColor;
 		z-index: 1;
 		transition: color 0.3s;
 	}
 
 	a:hover i.fa {
-		color: #FFFFFF;
+		color: @pageColor;
 	}
 }
 
 h2 {
-	background-color: #1f8dd6;
-	color: #FFFFFF;
+	background-color: @highlightColor;
+	color: @pageColor;
 	font-size: 1em;
 	padding: 0.1em 1em;
 }
