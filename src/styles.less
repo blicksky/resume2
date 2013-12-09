@@ -106,7 +106,50 @@ h2 {
 	padding: 0.1em 1em;
 }
 
+section > ol {
+	margin: 0;
+}
+
 .section-list {
 	list-style: none;
 	padding: 0;
+
+	li {
+		margin-bottom: 0;
+
+		h3 {
+			margin: 0;
+		}
+
+		.time-period,
+		.location {
+			text-align: right;
+			color: @lightTextColor;
+		}
+
+		.location {
+			font-size: 0.8em;
+		}
+
+		.title,
+		.degree {
+			font-style: italic;
+			color: @lightTextColor;
+		}
+
+		ul {
+			list-style-type: square;
+
+			li {
+				margin-bottom: 1em;
+			}
+		}
+	}
+}
+
+.skills-section {
+
+	p {
+		margin: 0.5em 0 0.5em 1em;
+	}
 }
