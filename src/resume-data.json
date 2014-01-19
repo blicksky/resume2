@@ -1,0 +1,77 @@
+{
+	"name": "John Doe",
+	"title": "Thing Doer",
+	"address": {
+		"street": "123 Any Place",
+		"city": "Anytown",
+		"state": {
+			"name": "New York",
+			"code": "NY"
+		},
+		"zipCode": "12345"
+	},
+	"phoneNumbers": [
+		{
+			"areaCode": "800",
+			"exchange": "555",
+			"suffix": "1234"
+		}
+	],
+	"url": "http://www.example.com",
+	"emailAddress": "career@example.com",
+	"employment": [
+		{
+			"employer": "Acme Corp",
+			"location": {
+				"city": "Anytown",
+				"state": "NY"
+			},
+			"start": "Apr 2009",
+			"end": "Present",
+			"title": "Senior Thing Doer",
+			"accomplishments": [
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac magna non augue porttitor scelerisque ac id diam. Mauris elit velit, lobortis sed interdum at, vestibulum vitae libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+				"Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris.",
+				"Fusce a metus eu diam varius congue nec nec sapien. Vestibulum orci tortor, sollicitudin ac euismod non, placerat ac augue."
+			]
+		},
+		{
+			"employer": "Megacorp",
+			"location": {
+				"city": "Somewhere",
+				"state": "VA"
+			},
+			"start": "Aug 2005",
+			"end": "Apr 2009",
+			"title": "Consultant - Stuff Accomplisher",
+			"accomplishments": [
+				"Maecenas eu placerat ante. Fusce ut neque justo, et aliquet enim. In hac habitasse platea dictumst. Nullam commodo neque erat, vitae facilisis erat.",
+				"Proin ornare ligula eu tellus tempus elementum. Aenean bibendum iaculis mi, nec blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus.",
+				"Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, bibendum eu pulvinar vel, sodales vitae dui"
+			]
+		}
+	],
+	"education": [
+		{
+			"institution": "College University",
+			"location": {
+				"city": "Placeville",
+				"state": "CA"
+			},
+			"start": "Sep 2001",
+			"end": "May 2005",
+			"degree": "Bachelor of Arts",
+			"description": "In facilisis scelerisque dui vel dignissim. Sed nunc orci, ultricies congue vehicula quis, facilisis a orci. In aliquet facilisis condimentum."
+		}
+	],
+	"skills": [
+		{
+			"name": "Thing Doing",
+			"description": "Proin ornare ligula eu tellus tempus elementum. Aenean bibendum iaculis mi, nec blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus."
+		},
+		{
+			"name": "Stuff Accomplishing",
+			"description": "In facilisis scelerisque dui vel dignissim. Sed nunc orci, ultricies congue vehicula quis, facilisis a orci. In aliquet facilisis condimentum."
+		}
+	]
+}
