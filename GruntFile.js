@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 
     // get files from config
     var templateFile = grunt.config.get('applyTemplate.templateFile');
-    var dataFile = grunt.config.get('applyTemplate.dataFile');
+    var dataFile = grunt.option('dataFile') || grunt.config.get('applyTemplate.dataFile');
     var outputFile = grunt.config.get('applyTemplate.outputFile');
 
     // require dependencies
